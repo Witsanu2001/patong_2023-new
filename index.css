@@ -1,0 +1,624 @@
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 200px;
+        height: auto;
+
+    }
+}
+
+.logo {
+  opacity: 0; /* เริ่มต้นที่ 0 เพื่อให้รูปภาพซ่อนอยู่ */
+}
+
+@keyframes slowFadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.slow-fade-in {
+  animation: slowFadeIn 2s ease-in-out; /* ปรับเวลาแสดงออกมาช้าๆ 2 วินาที */
+  animation-fill-mode: forwards; /* ทำให้ค่าสุดท้ายของ animation ถูกส่งไปยังสถานะปัจจุบัน */
+}
+
+@keyframes slideDown {
+  to {
+      transform: translateY(0); /* เลื่อนลงมา */
+      opacity: 1; /* ทำให้แสดงออกมา */
+  }
+}
+
+.slow-slide-down {
+  animation: slideDown 1.5s ease-in-out forwards; /* ปรับเวลาแสดงออกมาช้าลง 1.5 วินาที */
+  opacity: 0; /* เริ่มต้นที่ 0 เพื่อให้รูปภาพซ่อนอยู่ */
+}
+
+
+@media (max-width: 768px) {
+  .welcome-text {
+    display: block;
+    white-space: nowrap;
+    max-width: 100%; /* ปรับขนาดให้เหมาะสม */
+    margin-right: auto; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    margin-left: auto; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    margin-top: 0px;
+  }
+
+  
+  
+}
+
+
+
+/* CSS สำหรับปุ่มเมนูให้ดูสมูทและโอเวอร์ซีสมูทตาม responsive */
+@media (max-width: 768px) {
+    .col-4 {
+        width: auto;
+        flex: 0 0 auto;
+    }
+    
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;  
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+    
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    white-space: nowrap;
+    left: 0; /* ตำแหน่งจากด้านซ้ายของ dropdown */
+    top: 100%; /* ตำแหน่งจากด้านบนของ dropdown */
+    position: absolute;
+    
+
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+  }
+  .dropdown:hover .link-secondary {
+    border-left: 4px solid #00FFFF;  /* เพิ่มเส้นขอบด้านล่างเมื่อ hover */
+  }
+  .lighter {
+      color: #FFFAFA; /* กำหนดสีของข้อความเป็นสีเทาอ่อน */
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .nav-scroller{
+    white-space: nowrap;
+    position: relative;
+    }
+  
+
+    @media screen and (max-width: 768px) {
+        .nav .dropdown {
+            display: none; /* ซ่อนเมนูทั้งหมดในโหมด responsive */
+        }
+    }
+    /* CSS for responsive design */
+    /* ซ่อน dropdown content ของเมนูเมื่อเข้าสู่โหมด responsive */
+    .responsive-dropdown .dropdown-content {
+        display: none;
+    }
+
+    /* แสดง/ซ่อนปุ่ม dropdown เมื่อเข้าสู่โหมด responsive */
+    .responsive-dropdown .dropdown > a {
+        display: block;
+    }
+
+    /* ปรับการแสดงผลของปุ่ม dropdown เมื่อเข้าสู่โหมด responsive */
+    .responsive-dropdown .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .img {
+        width: 380px;
+    }
+
+    /* เพิ่ม Media Query เพื่อปรับขนาดของตารางเมื่อหน้าจอมีขนาดแตกต่างกัน */
+    @media (max-width: 768px) {
+    table {
+    /* ปรับขนาดตารางหรือทำการ scroll เมื่อหน้าจอเล็กลง */
+    max-height: 300px; /* กำหนดความสูงสูงสุดของตารางเมื่อหน้าจอมีขนาดเล็กลง */
+    overflow-y: auto; /* เพิ่ม scrollbar เมื่อเนื้อหามากเกินขนาดสูงสุดที่กำหนด */
+    width: 100%;
+    }
+}
+
+.card.shadow-sm {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* ปรับรูปแบบของการ์ด */
+    padding: 20px; /* เพิ่ม padding เพื่อให้ข้อความห่างออกมากขึ้น */
+    height: 350px;
+  }
+
+  .card.shadow-sm:hover {
+    /* background-color: #E4F3D8; */
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .card.shadow-sm {
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 10px; /* ปรับรูปแบบของการ์ด */
+      padding: 20px; /* เพิ่ม padding เพื่อให้ข้อความห่างออกมากขึ้น */
+      height: 350px;
+      margin-left: -45px;
+      margin-right: -40px;
+    }
+}
+
+  .card-text {
+    color: #333; /* เปลี่ยนสีข้อความ */
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+    text-decoration: none;
+  }
+
+  .text-muted {
+    color: #666; /* เปลี่ยนสีข้อความที่ไม่สำคัญ */
+    font-style: italic; /* ทำให้ข้อความเป็นตัวเอียง */
+
+  }
+  @media (max-width: 768px) {
+    .text-muted {
+      color: #666; /* เปลี่ยนสีข้อความที่ไม่สำคัญ */
+      font-style: italic; /* ทำให้ข้อความเป็นตัวเอียง */
+      text-align: left;
+    }
+  }
+
+  
+  
+  .card {
+    height: 100%; /* ความสูงของการ์ด */
+    margin-bottom: 30px; /* ระยะห่างด้านล่างของการ์ด */
+  }
+
+  /* การกำหนดความสูงของแต่ละการ์ด */
+  .card-1 {
+    height: 350px; /* ความสูงของการ์ดที่ 1 */
+  }
+
+  .card-2 {
+    height: 300px; /* ความสูงของการ์ดที่ 2 */
+  }
+
+  .card-3 {
+    height: 400px; /* ความสูงของการ์ดที่ 3 */
+  }
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+.card-text::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1.2em;
+  margin-top: -1.2em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+.card-body{
+  margin-top: -20px;
+  margin-left: -15px;
+}
+  
+
+  /* เพิ่มการ์ดใหม่ที่ต้องการตั้งค่าความสูง */
+  #notification {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;;
+    font-size: 90%;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 550px;
+    }
+
+    #notificationImg {
+    display: none;
+    width: auto;
+    max-width: 550px;
+    margin-top: -120px;
+    border-radius: 10px;
+    }
+
+    #notificationText {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      width: 100%;
+      align-items: center;
+      font-size: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    #notification {
+      width: 100%;
+      height: 100px;
+      background-color: #f0f0f0;
+      padding: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;;
+      font-size: 90%;
+      flex-direction: column;
+      margin-left: 0px;
+    }
+    #notificationImg {
+      display: none; /* ซ่อนรูปภาพตั้งแต่เริ่มต้น */
+      width: 250px;
+      margin-right: 0px; /* ระยะห่างของรูปภาพจากข้อความ */
+      margin-top: -140px;
+    }
+    
+    #notificationText {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      align-items: center;
+      margin-top: 30px;
+      font-size: 100%;
+    }
+    .atv{
+      font-size: 18px;
+    }
+    .btn-outline-primary{
+      margin-right: -100px;
+    }
+    .btn-sm{
+      margin-right: 0px;
+    }
+}
+
+.link-Agency{
+  width: 340px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+@media (max-width: 768px) {
+  .link-Agency{
+    width: 320px;
+  }
+}
+
+
+
+
+
+
+
+
+    /* CSS เมื่อ hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translate(0, 0);
+    visibility: visible;
+    
+  }
+
+@media (max-width: 576px) {
+    h4 {
+      font-size: 1.2rem; /* ปรับขนาดตามที่เห็นสมควรในหน้าจอขนาดเล็ก */
+      padding-bottom: 2rem; /* ปรับระยะห่างด้านล่าง */
+    }
+  }
+
+/* CSS */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: #07d9e9;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 10px;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: blue;
+  }
+  
+/* CSS */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #c2c1c1;
+  }
+  
+
+  .footer-right {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-left: 40px;
+    font-size: 15px;
+    margin-top: -15px;
+  }
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .footer-right {
+      font-size: 60%; /* ทำให้ข้อความเล็กลงเมื่อเป็น responsive */
+    }
+  } 
+  
+  /* CSS */
+.footer-left img {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -74px;
+  margin-left: -35px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .footer-left img {
+      width: 90%; /* ขนาดของรูปภาพเมื่อเป็น responsive */
+      margin: 0; /* เอาออกเมื่อเป็น responsive */
+      display: block;
+      margin-top: -70px;
+      margin-left: 10px;
+    }
+    .footer-right {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      margin-left: 0px;
+      font-size: 65%;
+      margin-top: 10px;
+    }
+  }
+
+  .search-box {
+    position: absolute;
+    top: 0;
+    right: -120px;
+    background-color: #fff;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.nested-item {
+    display: none;
+  }
+
+.fa-xmark{
+  margin-top: 5px;
+  color: #eb0a0a;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.fa-magnifying-glass{
+  /* margin-top: 0px; */
+  color: rgb(10, 59, 235);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.img-card{
+  margin-top: -10px;
+  width: 50%;
+  align-items: center;
+}
+
+/* เริ่มต้นเป็นซ่อน */
+.curtain {
+  opacity: 1;
+  transition: opacity 1s ease; /* ปรับความเร็วให้เหมาะสม */
+}
+
+
+
+.hide {
+  opacity: 0;
+}
+
+.footer-closing {
+  animation-name: slide-up;
+  animation-duration: 1s; /* ปรับความเร็วให้เหมาะสม */
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; /* คงสถานะที่จบการเคลื่อนที่ */
+  display: none; /* เริ่มต้นเป็นซ่อน */
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.curtain {
+  animation-name: slide-up;
+  animation-duration: 3s; /* ระยะเวลาที่เหมาะสม */
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; /* คงสถานะที่จบการเคลื่อนที่ */
+}
+
+.slide-container {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1.5s ease-out;
+}
+
+.slide-container.show {
+  max-height: 560px; /* หรือค่าที่ต้องการให้ม่านลงมา */
+}
+
+.d-block {
+  max-height: 560px;
+}
+@media (max-width: 768px) {
+  .d-block {
+    max-height: 250px;
+  }
+  
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row a{
+  text-decoration: none;
+}
+
+/* ปฏิทิน */
+.fc-toolbar {
+  font-size: 14px; /* ปรับขนาดตัวอักษรของ header */
+}
+
+.fc-button {
+  padding: 5px 10px; /* ปรับขนาดของปุ่ม */
+  font-size: 10px; /* ปรับขนาดตัวอักษร */
+}
+
+.link-secondary a {
+  text-decoration: none;
+}
+
+.position-sticky{
+  width: 350px;
+}
+
+.rounded{
+  width: 380px;
+}
+@media (max-width: 768px) {
+  .position-sticky{
+    width: 130%;
+    padding: 50px;
+    margin-left: -50px;
+    margin-top: -30px;
+  }
+  
+  .calendar {
+
+    width: 320px;
+  }
+
+  .rounded{
+    width: 350px;
+  }
+}
+
+.calendar {
+  margin-left: 0px;
+}
+
+.location{
+  margin-left: -430px;
+}
+
+.img-fluid-d {
+  max-width: 250%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .img-fluid-d {
+    max-width: 130%;
+    height: auto;
+  
+  }
+}
+
